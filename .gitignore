@@ -1,5 +1,6 @@
 venv/
 __pycache__/
 *.pyc
-.env
-.DS_Store
+model.pkl
+static/grafik.png
+static/grafik_prediksi.png
