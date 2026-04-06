@@ -1,0 +1,21 @@
+<div class="card shadow">
+<div class="card-body">
+
+<h4>Upload Dataset</h4>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" class="form-control mb-3" required>
+    <button class="btn btn-primary">Upload & Train Model</button>
+</form>
+
+<hr>
+
+<h4>Input Manual</h4>
+
+<form action="/prediksi" method="POST">
+    <input type="number" name="tahun" class="form-control mb-3" placeholder="Masukkan Tahun">
+    <button class="btn btn-success">Prediksi</button>
+</form>
+
+</div>
+</div>

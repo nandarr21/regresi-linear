@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem Prediksi Kemiskinan Indonesia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <style>
+        body { background-color: #1a1a2e; }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+        }
+
+        .btn-success {
+            background-color: #198754;
+            border: none;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+<div class="container py-5">
+
+    <h2 class="text-center mb-5 fw-bold">
+        Sistem Prediksi Kemiskinan Di Indonesia Berdasarkan Provinsi
+    </h2>
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- Upload Dataset -->
+        <div class="col-lg-5">
+            <div class="card p-4 text-dark shadow">
+                <h4 class="mb-3">Upload Dataset CSV</h4>
+                <form action="{{ url_for('upload') }}"
+                      method="post"
+                      enctype="multipart/form-data">
+                    <input type="file"
+                           name="file"
+                           class="form-control mb-3"
+                           required>
+                    <button class="btn btn-primary w-100">
+                        Upload & Train
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Input Manual -->
+        <div class="col-lg-5">
+            <div class="card p-4 text-dark shadow">
+                <h4 class="mb-3">Input Manual</h4>
+                <form action="{{ url_for('manual') }}" method="post">
+                    <input type="number"
+                           name="tahun"
+                           placeholder="Tahun"
+                           class="form-control mb-2"
+                           required>
+                    <input type="number"
+                           step="0.01"
+                           name="nilai"
+                           placeholder="Persentase Kemiskinan"
+                           class="form-control mb-3"
+                           required>
+                    <button class="btn btn-success w-100">
+                        Tambah Data
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- Tidak ada grafik di halaman utama -->
+</div>
+
+</body>
+</html>
