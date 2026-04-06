@@ -49,7 +49,7 @@ mae = mean_absolute_error(Y, y_pred)
 mse = mean_squared_error(Y, y_pred)
 r2 = r2_score(Y, y_pred)
 
-print("\n===== HASIL VALIDASI =====")
+print("\n HASIL VALIDASI")
 print("MAE :", mae)
 print("MSE :", mse)
 print("R2 Score :", r2)
